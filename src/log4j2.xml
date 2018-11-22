@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<File name="Logfile" fileName="logs/fbcmd4j.log" immediateFlush="true"
+			append="true">
+			<PatternLayout
+				pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<root level="debug">
+			<appender-ref ref="Logfile" level="info"/>
+			<appender-ref ref="Logfile" level="error"/>
+		</root>   
+	</Loggers>
+</Configuration>
